@@ -16,10 +16,16 @@ var solarSystem = (function(SolarSystem) {
     return dwarfPlanets;
   },
   solarSystem.setDwarfPlanets = function(dwarves) {
-    dwarfPlanets = dwarves;
+    dwarfPlanets[dwarfPlanets.length] = dwarves;
   }
+
   return solarSystem;
+
 })(solarSystem);
 
 console.log(solarSystem.getAgeOfSolarSystem());
 console.log(solarSystem.getPlanets());
+
+console.log(solarSystem.getDwarfPlanets());
+solarSystem.setDwarfPlanets("Brutus");
+console.log(solarSystem.getDwarfPlanets());

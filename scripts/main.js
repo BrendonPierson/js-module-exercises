@@ -6,7 +6,7 @@ var solarSystem = (function(){
 
   return {
     last_modified_date: new Date(),
-    
+
     getPlanets: function(){
       return planets;
     },
@@ -29,8 +29,8 @@ var solarSystem = (function(){
     getFunFacts: function(){
       return funFacts;
     },
-    setFunFacts: function(facts) {
-      funFacts = facts
+    setFunFacts: function(fact, value) {
+      funFacts[fact] = value;
     }
   }
 })();
@@ -46,10 +46,8 @@ console.log("solarSystem.planets: ", solarSystem.planets);
 console.log("solarSystem.getPlanets(): ", solarSystem.getPlanets());
 
 
-solarSystem.setFunFacts({
-  numerOfMoons: 176,
-  numberOfGasGiants: 4
-})
+solarSystem.setFunFacts("numerOfMoons", 176);
+solarSystem.setFunFacts("numberOfGasGiants", 4);
 
 console.log("Fun Facts: ", solarSystem.getFunFacts());
 
